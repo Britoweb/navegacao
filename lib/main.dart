@@ -5,6 +5,7 @@ import 'TelaSecundaria.dart';
 void main() {
   runApp(MaterialApp(
     home: TelaPrincipal(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -34,7 +35,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               onPressed: (){
                 Navigator.push(
                   context,
-                MaterialPageRoute(builder: (context) => TelaSecundaria()),
+                MaterialPageRoute(builder: (context) => TelaSecundaria(valor: "Rafael")),
                 );
               },
               child: Text("Passar para próxima tela."),
