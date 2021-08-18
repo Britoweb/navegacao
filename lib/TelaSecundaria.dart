@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TelaSecundaria extends StatefulWidget {
-  String  valor;
+  // String  valor;
 
-  TelaSecundaria({required this.valor});
+  // TelaSecundaria({ this.valor});
 
   @override
   _TelaSecundariaState createState() => _TelaSecundariaState();
@@ -21,8 +21,16 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
         padding: EdgeInsetsDirectional.all(32),
         child: Column(
           children: [
-            Text("Segunda Tela valor passado:  ${widget.valor}"),
-            
+            Text("Segunda Tela "),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  padding: EdgeInsetsDirectional.all(15)
+              ),
+              onPressed: (){
+                Navigator.pushNamed(context, "/");
+              },
+              child: Text("Passar para primeira tela."),
+            )
           ],
         ),
       ),
